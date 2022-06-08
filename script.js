@@ -6,7 +6,7 @@ if (notesList.length != 0) notesList = JSON.parse(notesList);
 function addNote() {
     let titleNote = document.querySelector("#titleNote");
     let textNote = document.querySelector("#textNote");
-    if (titleNote == "" || textNote == "") {
+    if (titleNote.value == "" || textNote.value == "") {
         alert("Please fill all inputs!");
         return;
     }
@@ -21,6 +21,14 @@ function addNote() {
     localStorage.setItem("notes", JSON.stringify(notesList));
     showNotes();
 }
+
+document.querySelector("#titleNote").addEventListener("keydown", (e) => {
+    if (e.key == "Enter") addNote();
+});
+
+document.querySelector("#textNote").addEventListener("keydown", (e) => {
+    if (e.key == "Enter") addNote();
+});
 
 function showNotes() {
     notes.innerHTML = "";
