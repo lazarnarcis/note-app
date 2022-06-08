@@ -10,6 +10,7 @@
     border-radius: 10px;
     margin: 10px;
     min-width: 150px;
+    max-width: 300px;
     min-height: 200px;
 }
 
@@ -26,4 +27,14 @@ h1, p {
     background: rgb(50, 148, 50);
     padding: 4px;
     border-radius: 10px;
+}
+
+#showMore {
+    padding: 1px;
+    background: white;
+    color: green;
+    float: right;
+    border-radius: 5px;
+    margin: 5px;
+    cursor: pointer;
 }
